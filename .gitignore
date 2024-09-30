@@ -1,0 +1,6 @@
+# Bynary files
+
+# Windowns
+*.exe 
+#Unix
+*.out 
