@@ -21,7 +21,6 @@ class Solution
                     map[nums[i]] = i;
             }
 
-            //Problem description assures that there's always at least one solution in nums so this shouldn't happen.
             return {-1 , -1};                    
         }
 };
