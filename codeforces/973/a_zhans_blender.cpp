@@ -6,8 +6,10 @@ void solve()
     int x;
     int y;
     std::cin >> n >> x >> y;
+
     int bottleneck = std::min(x, y);
     int result = n % bottleneck == 0 ? n / bottleneck : n / bottleneck + 1;
+    
     std::cout << result << "\n";
 }
 
