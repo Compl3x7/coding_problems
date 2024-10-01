@@ -1,5 +1,7 @@
 // Runtime: 5ms | Beats 34.03% of users
 // Memory: 17.83MB | Beats 8.37% of users
+// Time complexity: O(n)
+// Spacial complexity O(n)
 
 /**
  * Definition for a binary tree node.
