@@ -1,21 +1,17 @@
 #include <bits/stdc++.h>
 
-void solve()
+void solve(std::string c, int d)
 {
-    int d;
-    char c[1000];
-    std::cin >> d >> c;
-
     int count = 0;
     int i = 0;
-    while (c[i])
+    while (i < c.length())
     {
         if (c[i] == 'F')
         {
             count++;
             i += d;
         }
-        else if (c[i] == '.')
+        else
             i++;
     }
 
@@ -29,8 +25,17 @@ int main()
     
     int t;
     std::cin >> t;
-    while (t--)
-        solve();
+
+    std::vector<int> d(t);
+    std::vector<std::string> c(t);
+    for (int i = 0; i < t; i++)
+    {
+        std::cin >> d[i];
+        std::cin >> c[i];
+    }
+
+    for (int i = 0; i < t; i++)
+        solve(c[i], d[i]);
 
     return 0;
 }
