@@ -8,7 +8,7 @@ void solve()
 
     int common_prefix_count = 0;
 
-    for (int i = 0; i < s.length() || i < t.length(); i++)
+    for (int i = 0; i < s.length() && i < t.length(); i++)
         if (s[i] == t[i])
             common_prefix_count++;
         else 
