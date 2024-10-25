@@ -10,11 +10,12 @@ void solve()
         std::cin >> a[i];
 
     int count = 0;
-    int curr_sum = 0;
-    std::unordered_set<int> prev_sums;
+    long long curr_sum = 0;
+    // std::unordered_set<int> prev_sums; I learnt about hash hacking the hard way :(
+    std::set<long long> prev_sums;
     for (int i = 0; i < n; i++)
     {
-        curr_sum += a[i];
+        curr_sum += (long long) a[i];
         if (curr_sum == 0 || prev_sums.contains(curr_sum))
         {
             count++;

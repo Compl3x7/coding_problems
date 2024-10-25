@@ -1,5 +1,22 @@
 #include <bits/stdc++.h>
 
+void solve(std::vector<int> &k, int t)
+{
+    int max = 0;
+    for (int i = 0; i < t; i++)
+        if (k[i] > max)
+            max = k[i];
+
+    int mod = 1000000007;
+    std::vector<int> powers(max);
+    powers[0] = 2;
+    for (int i = 1; i < max; i++)
+        powers[i] = (powers[i - 1] * 2) % mod;
+
+    for (int i = 0; i < t; i++)
+        std::cout << powers[k[i] - 1] << "\n";
+}
+
 int main()
 {
     std::ios_base::sync_with_stdio(false);
@@ -16,19 +33,7 @@ int main()
     for (int i = 0; i < t; i++)
         std::cin >> k[i];
     
-    int max = 0;
-    for (int i = 0; i < t; i++)
-        if (k[i] > max)
-            max = k[i];
-
-    int mod = 1000000007;
-    std::vector<int> powers(max);
-    powers[0] = 2;
-    for (int i = 1; i < max; i++)
-        powers[i] = (powers[i - 1] * 2) % mod;
-
-    for (int i = 0; i < t; i++)
-        std::cout << powers[k[i] - 1] << "\n";
+    solve(k, t);
 
     return 0;
 }
