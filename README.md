@@ -17,7 +17,7 @@ My profile can be found [here](https://codeforces.com/profile/Compl3x7).
 
 ### ./leet_code/
 
-Directory in which all solutions are from *LeetCode* problems. Each subdirectory corresponds to a difficulty level, and each solution in it follows the following naming convention:
+Directory in which all solutions are from [*LeetCode*](https://leetcode.com/) problems. Each subdirectory corresponds to a difficulty level, and each solution in it follows the following naming convention:
 
 ```
 ./(difficulty)/(problem number)_(problem name in snake case).(file extension)
