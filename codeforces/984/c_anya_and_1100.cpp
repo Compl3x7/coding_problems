@@ -2,7 +2,7 @@
 
 int find_1100_from(std::string &s, int i)
 {
-    if (i + 3 > s.length())
+    if (i < 0 || i + 3 > s.length())
         return -1;
 
     if (s[i] == '1' && s[i + 1] == '1' && s[i + 2] == '0' && s[i + 3] == '0')
