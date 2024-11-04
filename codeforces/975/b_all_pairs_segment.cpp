@@ -14,7 +14,7 @@ void solve()
     for (int i = 0; i < q; i++)
         std::cin >> queries[i];
 
-    std::map<long long, int> map;
+    std::unordered_map<long long, int> map;
     int i = 0;
     int j = i;
     while (points[0] + i <= points[n - 1])
