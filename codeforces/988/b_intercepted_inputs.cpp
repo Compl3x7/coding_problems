@@ -17,7 +17,7 @@ void solve()
             continue;
             
         int complement = target / stream[i];
-        if (values.count(complement))
+        if (values.contains(complement))
         {
             std::cout << stream[i] << " " << complement << "\n";
             return;
