@@ -15,25 +15,22 @@ void solve()
 
     int term = 1;
     int left_size = n % 2 != 0 ? n / 2 : n / 2 - 1;
-    for (int i = 0; i < left_size; i++)
+    int i = 0;
+    while (i < left_size)
     {
         if (term != 5)
-            permutation[i] = term;
-        else
-            i--; //hack ;( i'm sad
+            permutation[i++] = term;
         term += 2;
     }
 
-    permutation[left_size] = 5;
-    permutation[left_size + 1] = 4;
+    permutation[i++] = 5;
+    permutation[i++] = 4;
 
     term = 2;
-    for (int i = left_size + 2; i < n; i++)
+    while (i < n)
     {
         if (term != 4)
-            permutation[i] = term;
-        else
-            i--; //hack ;( i'm sad
+            permutation[i++] = term;
         term += 2;
     }
 
