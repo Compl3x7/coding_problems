@@ -2,7 +2,7 @@
 
 int log(int base, int n)
 {
-    long long result = 0;
+    int result = 0;
     while (n >= base)
     {
         n /= base;
@@ -13,7 +13,7 @@ int log(int base, int n)
 
 int pow(int base, int exp)
 {
-    long long result = 1;
+    int result = 1;
     while (exp-- > 0)
         result *= base;
     
