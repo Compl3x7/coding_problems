@@ -48,15 +48,9 @@ void solve()
         tree[to].push_back(from);
     }
 
-    int result;
-    if (n < 4)
-        result = 1;
-    else
-    {
-        int start_node = furthest_node(0, tree);
-        int cost = max_depth(start_node, -1, tree);
-        result = cost / 2 + cost % 2;
-    }
+    int start_node = furthest_node(0, tree);
+    int cost = max_depth(start_node, -1, tree);
+    int result = cost / 2 + cost % 2;
 
     std::cout << result << "\n";
 }
